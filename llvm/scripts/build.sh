@@ -1,0 +1,1 @@
+cmake -S . -B build -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra" -DLLVM_CCACHE_BUILD=ON -DCMAKE_CXX_FLAGS="-fuse-ld=mold" -DLLVM_ENABLE_EH=ON -DLLVM_ENABLE_RTTI=ON && cmake --build build -j --target clangd cppfront
